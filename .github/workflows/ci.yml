@@ -53,6 +53,6 @@ jobs:
       - name: install frontend dependencies
         run: pnpm install # change this to npm or pnpm depending on which one you use
       - name: build application
-        run: pnpm tauri build -d
+        run: pnpm tauri build -d --target aarch64-apple-darwin
 
         
