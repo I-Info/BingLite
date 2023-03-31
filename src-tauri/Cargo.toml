@@ -2,9 +2,8 @@
 name = "app"
 version = "0.1.0"
 description = "Bing Lite"
-authors = ["you"]
-license = ""
-repository = ""
+authors = ["i1nfo"]
+license = "MIT"
 default-run = "app"
 edition = "2021"
 rust-version = "1.59"

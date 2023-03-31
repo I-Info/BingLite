@@ -3,8 +3,8 @@
   "build": {
     "beforeBuildCommand": "",
     "beforeDevCommand": "",
-    "devPath": "./ui",
-    "distDir": "./ui"
+    "devPath": "../dist",
+    "distDir": "../dist"
   },
   "package": {
     "productName": "BingLite",
@@ -53,16 +53,6 @@
     "updater": {
       "active": false
     },
-    "windows": [
-      {
-        "url": " https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx",
-        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.0.0",
-        "fullscreen": false,
-        "height": 1000,
-        "resizable": true,
-        "title": "Bing Lite",
-        "width": 800
-      }
-    ]
+    "windows": []
   }
 }
