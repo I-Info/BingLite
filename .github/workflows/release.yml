@@ -20,8 +20,16 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
+      
       - name: install Rust stable
+        if: matrix.platform != 'macos-latest'
         uses: dtolnay/rust-toolchain@stable
+      - name: install Rust stable (macOS)
+        if: matrix.platform == 'macos-latest'
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-apple-darwin
+
       - name: install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-20.04'
         run: |
@@ -38,3 +46,16 @@ jobs:
           releaseBody: 'See the assets to download this version and install.'
           releaseDraft: false
           prerelease: false
+      
+      - name: upload aarch64-apple-darwin bundle
+        if: matrix.platform == 'macos-latest'
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
+          releaseName: 'BingLite v__VERSION__'
+          releaseBody: 'See the assets to download this version and install.'
+          releaseDraft: false
+          prerelease: false
+          args: --target aarch64-apple-darwin
