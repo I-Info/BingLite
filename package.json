@@ -1,5 +1,17 @@
 {
+	"scripts": {
+		"dev": "webpack --mode=development && tauri dev",
+		"build": "webpack --mode=production && tauri build"
+	},
 	"devDependencies": {
-		"@tauri-apps/cli": "^1.2.3"
+		"@tauri-apps/cli": "^1.2.3",
+		"@types/node": "^18.15.11",
+		"ts-loader": "^9.4.2",
+		"typescript": "^5.0.3",
+		"webpack": "^5.77.0",
+		"webpack-cli": "^5.0.1"
+	},
+	"dependencies": {
+		"@tauri-apps/api": "^1.2.0"
 	}
 }

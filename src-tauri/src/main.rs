@@ -6,7 +6,7 @@
 const UA: &str =  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.0.0";
 const URL: &str = "https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx";
 
-const INIT_SCRIPT: &str = include_str!("../init.js");
+const INIT_SCRIPT: &str = include_str!("../../dist/bundle.js");
 
 fn main() {
     tauri::Builder::default()

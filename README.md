@@ -14,9 +14,8 @@ The latest pre-built application in [release page](https://github.com/I-Info/Bin
 3. **Reload** the page after logging in.
 
 ## Build from source
-1. Prepare Tauri dev-env.
-([See guide](https://tauri.app/v1/guides/getting-started/prerequisites))
-2. Install `tauri-cli`
+1. Prepare Tauri dev-env. ([See guide](https://tauri.app/v1/guides/getting-started/prerequisites))
+2. Install font-end dependencies
    
     It is recommended to use `pnpm`:
     ```sh
