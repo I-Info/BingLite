@@ -25,5 +25,14 @@ The latest pre-built application in [release page](https://github.com/I-Info/Bin
 3. Build release
 
     ```sh
-    pnpm tauri build
+    pnpm build
     ```
+
+## Notes
+### More application features
+IPC access for remote URLs in Tauri is currently not allowed,
+waiting for [PR#5918](https://github.com/tauri-apps/tauri/pull/5918) merge. 
+If it is necessary, I would try to create a fork.
+### Solution for redirecting to `cn.bing.com`
+1. Setup network proxies properly.
+2. Restart the app.
