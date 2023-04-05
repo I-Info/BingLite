@@ -36,3 +36,6 @@ If it is necessary, I would try to create a fork.
 ### Solution for redirecting to `cn.bing.com`
 1. Setup network proxies properly.
 2. Restart the app.
+
+## Credit
+- [dice2o/BingGPT](https://github.com/dice2o/BingGPT)
