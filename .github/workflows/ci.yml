@@ -22,15 +22,26 @@ jobs:
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
 
+      - name: checkout tauri
+        run: git clone https://github.com/I-Info/tauri --branch=next --depth=1
+      
       - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            tauri/tooling/cli -> tauri/tooling/cli/target
+            src-tauri -> src-tauri/target
+
+      - name: install tauri
+        run: |
+          cd tauri/tooling/cli
+          cargo install --path .
 
       - name: install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-latest'
         run: |
           sudo apt-get update
           sudo apt-get install -y webkit2gtk-4.1 libayatana-appindicator3-dev
-      - name: install cargo-tauri 
-        run: cargo install tauri-cli --force --git https://github.com/I-Info/tauri --branch next
+
       - name: install frontend dependencies
         run: pnpm install # change this to npm or pnpm depending on which one you use
       - name: build application
@@ -54,10 +65,19 @@ jobs:
         with:
           targets: aarch64-apple-darwin
 
+      - name: checkout tauri
+        run: git clone https://github.com/I-Info/tauri --branch=next --depth=1
+      
       - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            tauri/tooling/cli -> tauri/tooling/cli/target
+            src-tauri -> src-tauri/target
 
-      - name: install cargo-tauri 
-        run: cargo install tauri-cli --force --git https://github.com/I-Info/tauri --branch next
+      - name: install tauri
+        run: |
+          cd tauri/tooling/cli
+          cargo install --path .
 
       - name: install frontend dependencies
         run: pnpm install # change this to npm or pnpm depending on which one you use
