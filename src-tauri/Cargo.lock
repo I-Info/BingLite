@@ -2719,7 +2719,7 @@ dependencies = [
 [[package]]
 name = "tauri"
 version = "2.0.0-alpha.7"
-source = "git+https://github.com/I-Info/tauri?branch=next#9c3035a9198bb8749098dbed82eac6e732d0f3ed"
+source = "git+https://github.com/I-Info/tauri?branch=next#8e66c770382fad7c0dc34653d8de1cb8344ce4b7"
 dependencies = [
  "anyhow",
  "bytes",
@@ -2772,7 +2772,7 @@ dependencies = [
 [[package]]
 name = "tauri-build"
 version = "2.0.0-alpha.4"
-source = "git+https://github.com/I-Info/tauri?branch=next#9c3035a9198bb8749098dbed82eac6e732d0f3ed"
+source = "git+https://github.com/I-Info/tauri?branch=next#8e66c770382fad7c0dc34653d8de1cb8344ce4b7"
 dependencies = [
  "anyhow",
  "cargo_toml",
@@ -2791,7 +2791,7 @@ dependencies = [
 [[package]]
 name = "tauri-codegen"
 version = "2.0.0-alpha.4"
-source = "git+https://github.com/I-Info/tauri?branch=next#9c3035a9198bb8749098dbed82eac6e732d0f3ed"
+source = "git+https://github.com/I-Info/tauri?branch=next#8e66c770382fad7c0dc34653d8de1cb8344ce4b7"
 dependencies = [
  "base64 0.21.0",
  "brotli",
@@ -2817,7 +2817,7 @@ dependencies = [
 [[package]]
 name = "tauri-macros"
 version = "2.0.0-alpha.4"
-source = "git+https://github.com/I-Info/tauri?branch=next#9c3035a9198bb8749098dbed82eac6e732d0f3ed"
+source = "git+https://github.com/I-Info/tauri?branch=next#8e66c770382fad7c0dc34653d8de1cb8344ce4b7"
 dependencies = [
  "heck",
  "proc-macro2",
@@ -2830,7 +2830,7 @@ dependencies = [
 [[package]]
 name = "tauri-runtime"
 version = "0.13.0-alpha.4"
-source = "git+https://github.com/I-Info/tauri?branch=next#9c3035a9198bb8749098dbed82eac6e732d0f3ed"
+source = "git+https://github.com/I-Info/tauri?branch=next#8e66c770382fad7c0dc34653d8de1cb8344ce4b7"
 dependencies = [
  "gtk",
  "http",
@@ -2851,7 +2851,7 @@ dependencies = [
 [[package]]
 name = "tauri-runtime-wry"
 version = "0.13.0-alpha.4"
-source = "git+https://github.com/I-Info/tauri?branch=next#9c3035a9198bb8749098dbed82eac6e732d0f3ed"
+source = "git+https://github.com/I-Info/tauri?branch=next#8e66c770382fad7c0dc34653d8de1cb8344ce4b7"
 dependencies = [
  "cocoa",
  "gtk",
@@ -2871,7 +2871,7 @@ dependencies = [
 [[package]]
 name = "tauri-utils"
 version = "2.0.0-alpha.4"
-source = "git+https://github.com/I-Info/tauri?branch=next#9c3035a9198bb8749098dbed82eac6e732d0f3ed"
+source = "git+https://github.com/I-Info/tauri?branch=next#8e66c770382fad7c0dc34653d8de1cb8344ce4b7"
 dependencies = [
  "brotli",
  "ctor",
