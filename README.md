@@ -1,5 +1,5 @@
 # Bing Lite
-A lightweight new Bing (AI chat) desktop application which based on [`Tauri`](https://tauri.app). 
+A lightweight new Bing (AI chat) desktop application based on [`Tauri`](https://tauri.app). 
 
 *No more Microsoft Edge, no more Chromium/Electron!* 
 
@@ -29,10 +29,8 @@ The latest pre-built application in [release page](https://github.com/I-Info/Bin
     ```
 
 ## Notes
-### More application features
-IPC access for remote URLs in Tauri is currently not allowed,
-waiting for [PR#5918](https://github.com/tauri-apps/tauri/pull/5918) merge. 
-If it is necessary, I would try to create a fork.
+### More features / Mobile support
+Work in progress...
 ### Solution for redirecting to `cn.bing.com`
 1. Setup network proxies properly.
 2. Restart the app.
