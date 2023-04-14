@@ -3,27 +3,31 @@
     windows_subsystem = "windows"
 )]
 
-const UA: &str =  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.0.0";
-const URL: &str = "https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx";
+#[cfg(mobile)]
+pub fn main() {
+    // Mobile entry point is in src-tauri/src/mobile.rs.
+    // Keep this empty.
+}
 
-const INIT_SCRIPT: &str = include_str!("../../dist/bundle.js");
+#[cfg(desktop)]
+const UA: &str = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.41";
 
+#[cfg(desktop)]
 fn main() {
-    tauri::Builder::default()
+    app::AppBuilder::new()
         .setup(|app| {
             tauri::WindowBuilder::new(
                 app,
                 "main",
-                tauri::WindowUrl::External(URL.parse().unwrap()),
+                tauri::WindowUrl::External(app::URL.parse().unwrap()),
             )
             .user_agent(UA)
             .title("Bing Lite")
             .inner_size(800f64, 1000f64)
-            .initialization_script(INIT_SCRIPT)
+            .initialization_script(app::INIT_SCRIPT)
             .build()
             .unwrap();
             Ok(())
         })
-        .run(tauri::generate_context!())
-        .expect("error while running tauri application");
+        .run();
 }
