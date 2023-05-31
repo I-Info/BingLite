@@ -1,4 +1,4 @@
-import { shell } from "@tauri-apps/api";
+import { open as shellOpen } from "@tauri-apps/plugin-shell"
 
 console.log("Initialize scripts loaded.");
 
@@ -11,8 +11,8 @@ function clickListener(e: Event) {
         let href = (target as HTMLAnchorElement).href;
         // Whether the href is a URL.
         if (href.startsWith("http://") || href.startsWith("https://")) {
-            shell.open(href);
-
+            shellOpen(href);
+            
             e.preventDefault();
             e.stopPropagation();
             return false;

@@ -14,18 +14,17 @@ rust-version = "1.59"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies.tauri-build]
-git = "https://github.com/I-Info/tauri"
-branch = "next"
+version = "2.0.0-alpha.5"
 features = []
 
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
+tauri-plugin-shell = "2.0.0-alpha.0"
 
 [dependencies.tauri]
-git = "https://github.com/I-Info/tauri"
-branch = "next"
-features = ["shell-open"]
+version = "2.0.0-alpha.9"
+features = []
 
 [features]
 # by default Tauri runs in production mode

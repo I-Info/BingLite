@@ -39,6 +39,7 @@ impl AppBuilder {
 
                 Ok(())
             })
+            .plugin(tauri_plugin_shell::init())
             .run(tauri::generate_context!())
             .expect("error while running tauri application");
     }

@@ -11,16 +11,6 @@
     "version": "0.2.0"
   },
   "tauri": {
-    "allowlist": {
-      "all": false,
-      "shell": {
-        "all": false,
-        "execute": false,
-        "open": true,
-        "scope": [],
-        "sidecar": false
-      }
-    },
     "bundle": {
       "active": true,
       "category": "DeveloperTool",
@@ -59,11 +49,8 @@
       "dangerousRemoteDomainIpcAccess": [ {
         "domain": "www.bing.com",
         "windows": ["main"],
-        "enableTauriAPI": true
+        "plugins": ["shell"]
       }]
-    },
-    "updater": {
-      "active": false
     },
     "windows": []
   }
