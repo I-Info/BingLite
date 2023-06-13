@@ -31,6 +31,7 @@ fn main() {
             Ok(())
         })
         .run(move |app_handle, e| match e {
+            #[cfg(target_os = "macos")]
             tauri::RunEvent::WindowEvent {
                 label,
                 event: tauri::WindowEvent::CloseRequested { api, .. },
