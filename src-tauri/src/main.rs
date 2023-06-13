@@ -27,7 +27,20 @@ fn main() {
             .initialization_script(app::INIT_SCRIPT)
             .build()
             .unwrap();
+
             Ok(())
         })
-        .run();
+        .run(move |app_handle, e| match e {
+            tauri::RunEvent::WindowEvent {
+                label,
+                event: tauri::WindowEvent::CloseRequested { api, .. },
+                ..
+            } => {
+                if label == "main" {
+                    app_handle.hide().unwrap();
+                    api.prevent_close();
+                }
+            }
+            _ => (),
+        });
 }

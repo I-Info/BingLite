@@ -15,5 +15,5 @@ fn main() {
             .unwrap();
             Ok(())
         })
-        .run();
+        .run(|_, _| {});
 }
