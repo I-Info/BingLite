@@ -4,11 +4,11 @@ A lightweight new Bing (AI chat) desktop application based on [`Tauri`](https://
 *No more Microsoft Edge, no more Chromium/Electron!* 
 
 ## Download
-The latest pre-built application in [release page](https://github.com/I-Info/BingLite/releases).
+See the latest build in [release page](https://github.com/I-Info/BingLite/releases).
 
 ## How to use
 1. Prepare:
-   - A Microsoft account **with access to new Bing**.
+   - A Microsoft account.
    - Network proxy (necessary in some regions, such as China)
 2. Sign in to your Microsoft account.
 3. **Reload** the page after logging in.
@@ -29,11 +29,17 @@ The latest pre-built application in [release page](https://github.com/I-Info/Bin
     ```
 
 ## Notes
-### More features / Mobile support
+### Warning: "BingLite" is damaged and can’t be opened.
+This warning is shown because the build is not signed.
+Run the following command to suppress this warning, and reopen the app.
+```sh
+xattr -r -d com.apple.quarantine /Applications/BingLite.app
+```
+### Mobile support
 Work in progress...
 ### Solution for redirecting to `cn.bing.com`
 1. Setup network proxies properly.
 2. Restart the app.
 
-## Credit
+## Credits
 - [dice2o/BingGPT](https://github.com/dice2o/BingGPT)
