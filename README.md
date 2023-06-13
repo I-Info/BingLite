@@ -3,6 +3,8 @@ A lightweight new Bing (AI chat) desktop application based on [`Tauri`](https://
 
 *No more Microsoft Edge, no more Chromium/Electron!* 
 
+![screenshot](https://s2.loli.net/2023/06/13/dcyS5kru6FjfmKs.jpg)
+
 ## Download
 See the latest build in [release page](https://github.com/I-Info/BingLite/releases).
 
