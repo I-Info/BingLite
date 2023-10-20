@@ -4,7 +4,7 @@
 		"build": "webpack --mode=production && tauri build"
 	},
 	"devDependencies": {
-		"@tauri-apps/cli": "2.0.0-alpha.9",
+		"@tauri-apps/cli": "2.0.0-alpha.16",
 		"@types/node": "^18.16.14",
 		"ts-loader": "^9.4.3",
 		"typescript": "^5.0.4",
